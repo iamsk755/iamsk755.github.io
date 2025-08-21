@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonukrishna KR - SDET Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        section {
+            scroll-margin-top: 64px; /* Offset for fixed header */
+        }
+
+        /* Timeline line */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 19px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background-color: #334155; /* slate-700 */
+        }
+
+        .timeline-item:last-child::before {
+            height: 20px;
+        }
+
+        /* Spinner animation */
+        .spinner {
+            border-top-color: #38bdf8; /* sky-400 */
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-slate-900 text-slate-300">
+
+     <!--Header-->
+    <header class="bg-slate-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">Sonukrishna K R</a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#about" class="hover:text-sky-400 transition-colors duration-300">About</a>
+                <a href="#experience" class="hover:text-sky-400 transition-colors duration-300">Experience</a>
+                <a href="#projects" class="hover:text-sky-400 transition-colors duration-300">Projects</a>
+                <a href="#skills" class="hover:text-sky-400 transition-colors duration-300">Skills</a>
+                <a href="#contact" class="bg-sky-500 hover:bg-sky-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <i data-lucide="menu"></i>
+            </button>
+        </nav>
+        <!--Mobile Menu-->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 hover:text-sky-400">About</a>
+            <a href="#experience" class="block py-2 hover:text-sky-400">Experience</a>
+            <a href="#projects" class="block py-2 hover:text-sky-400">Projects</a>
+            <a href="#skills" class="block py-2 hover:text-sky-400">Skills</a>
+            <a href="#contact" class="block mt-2 bg-sky-500 hover:bg-sky-600 text-white font-medium py-2 px-4 rounded-lg text-center">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6">
+         <!--Hero Section-->
+        <section id="home" class="text-center py-12 md:py-16">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Software Development Engineer in Test</h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-8">
+                Building robust automation frameworks and championing a culture of quality. I specialize in UI, API, and performance testing to ensure seamless user experiences.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="https://github.com/your-username" target="_blank" class="bg-slate-700 hover:bg-slate-600 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300 flex items-center space-x-2">
+                    <i data-lucide="github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/sonukrishnakr/" target="_blank" class="bg-sky-500 hover:bg-sky-600 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300 flex items-center space-x-2">
+                    <i data-lucide="linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </section>
+
+         <!--About Me Section-->
+        <section id="about" class="section py-12 md:py-16">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="md:col-span-3">
+                    <h2 class="text-3xl font-bold text-white mb-4">About Me</h2>
+                    <p class="mb-4 text-slate-400">
+                        Hello! I'm a results-driven SDET with a comprehensive background in software quality assurance. My passion lies in architecting efficient, scalable, and maintainable test automation solutions that are integral to the CI/CD pipeline.
+                    </p>
+                    <p class="mb-4 text-slate-400">
+                        I have hands-on experience designing and implementing frameworks from scratch across UI, API, and performance testing. I enjoy not only identifying critical bugs and analyzing system bottlenecks, but also mentoring junior engineers and leading testing initiatives to elevate team performance. I thrive on collaborating with development teams to champion a culture of quality from the ground up.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        
+    <!-- Key Competencies Section -->
+    <section id="competencies" class="section py-12 md:py-16 bg-slate-800/50">
+        <h2 class="text-3xl font-bold text-white text-center mb-12">Areas of Expertise</h2>
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+
+        <!-- Competency 1 -->
+        <div class="bg-slate-800 p-6 rounded-lg">
+            <i data-lucide="shield-check" class="mx-auto text-sky-400 h-10 w-10 mb-2"></i>
+            <h3 class="text-lg font-semibold text-white">End-to-End Automation Strategy</h3>
+            <p class="text-slate-400 text-sm">Designing and implementing robust automation frameworks from scratch for UI, API, and mobile platforms.</p>
+        </div>
+
+        <!-- Competency 2 -->
+        <div class="bg-slate-800 p-6 rounded-lg">
+            <i data-lucide="refresh-cw" class="mx-auto text-sky-400 h-10 w-10 mb-2"></i>
+            <h3 class="text-lg font-semibold text-white">CI/CD Pipeline Integration</h3>
+            <p class="text-slate-400 text-sm">Integrating automated tests into CI/CD pipelines to enable continuous testing and faster feedback cycles.</p>
+        </div>
+
+        <!-- Competency 3 -->
+        <div class="bg-slate-800 p-6 rounded-lg">
+            <i data-lucide="gauge-circle" class="mx-auto text-sky-400 h-10 w-10 mb-2"></i>
+            <h3 class="text-lg font-semibold text-white">Performance & Load Testing</h3>
+            <p class="text-slate-400 text-sm">Identifying system bottlenecks and ensuring application scalability and reliability under load.</p>
+        </div>
+
+    </div>
+    </section>
+
+
+         <!--Work Experience Section-->
+        <section id="experience" class="py-12 md:py-16">
+            <h2 class="text-3xl font-bold text-white text-center mb-12">Work Experience</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="relative">
+                     <!--Timeline Item 1-->
+                    <div class="timeline-item relative pl-12 pb-12">
+                        <div class="absolute left-0 top-0 h-10 w-10 bg-sky-500 rounded-full flex items-center justify-center">
+                            <i data-lucide="briefcase" class="text-white"></i>
+                        </div>
+                        <div class="ml-4">
+                            <p class="text-sm text-slate-400 mb-1">November 2024 - Present</p>
+                            <h3 class="text-xl font-bold text-white">Tech Process Senior Associate - QA</h3>
+                            <p class="text-md text-slate-300 mb-2">Google Operations Center</p>
+                            <ul class="list-disc list-inside text-slate-400 space-y-1">
+                                <li>Developed and maintained automated test frameworks for critical user-facing applications.</li>
+                                <li>Designed and executed API tests using REST Assured to validate backend services.</li>
+                                <li>Integrated automation scripts into the CI/CD pipeline using Jenkins and GitHub Actions.</li>
+                                <li>Mentored junior QA engineers and led testing efforts for major feature releases.</li>
+                                <li>Collaborated with developers in an Agile environment to ensure quality throughout the sprint.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item relative pl-12 pb-4">
+                        <div class="absolute left-0 top-0 h-10 w-10 bg-slate-700 rounded-full flex items-center justify-center">
+                            <i data-lucide="building" class="text-white"></i>
+                        </div>
+                        <div class="ml-4">
+                            <p class="text-sm text-slate-400 mb-1">August 2021 - November 2024</p>
+                            <h3 class="text-xl font-bold text-white">Software Quality Engineer</h3>
+                            <p class="text-md text-slate-300 mb-2">Infosys</p>
+                            <ul class="list-disc list-inside text-slate-400 space-y-1">
+                                <li>Executed manual and automated test cases for web and mobile applications.</li>
+                                <li>Identified, documented, and tracked bugs to resolution using JIRA.</li>
+                                <li>Contributed to an existing Selenium automation framework to increase test coverage.</li>
+                                <li>Conducted performance and load testing using JMeter to identify system bottlenecks.</li>
+                                <li>Engineered both Automation and Manual E2E tests for integrated Logistics, Retail and E-Commerce platforms, covering the entire customer lifecycle.</li>
+                                <li>Participated in daily stand-ups and sprint planning meetings.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!--Project Section-->
+        <section id="projects" class="section py-12 md:py-16">
+            <h2 class="text-3xl font-bold text-white text-center mb-12">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!--Project 1-->
+                <div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold text-white mb-2">Selenium UI Automation Framework</h3>
+                        <p class="text-slate-400 mb-4">
+                            A complete UI test automation framework for an e-commerce demo site, built using the Page Object Model (POM) design pattern for maintainability and scalability.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-sky-900/50 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Java</span>
+                            <span class="bg-sky-900/50 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Selenium</span>
+                            <span class="bg-sky-900/50 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">TestNG</span>
+                            <span class="bg-sky-900/50 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Maven</span>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://github.com/your-username/selenium-java-framework" target="_blank" class="text-sky-400 hover:text-sky-300 font-medium inline-flex items-center space-x-2">
+                            <span>View on GitHub</span>
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!--Project 2-->
+                <div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold text-white mb-2">API Test Automation Suite</h3>
+                        <p class="text-slate-400 mb-4">
+                            A comprehensive test suite for a public REST API, focusing on endpoint validation, schema verification, and data-driven testing for various scenarios.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-sky-900/50 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Java</span>
+                            <span class="bg-sky-900/50 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">REST Assured</span>
+                            <span class="bg-sky-900/50 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">TestNG</span>
+                            <span class="bg-sky-900/50 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Maven</span>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#" class="text-slate-500 font-medium inline-flex items-center space-x-2 cursor-not-allowed">
+                            <span>Coming Soon</span>
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!--Project 3-->
+                <div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold text-white mb-2">JMeter Performance Test Suite</h3>
+                        <p class="text-slate-400 mb-4">
+                            A performance testing project designed to identify system bottlenecks and measure key metrics like response time, throughput, and resource utilization under load.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-sky-900/50 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">JMeter</span>
+                            <span class="bg-sky-900/50 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Performance Testing</span>
+                            <span class="bg-sky-900/50 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Grafana</span>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#" class="text-slate-500 font-medium inline-flex items-center space-x-2 cursor-not-allowed">
+                            <span>Coming Soon</span>
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!--Project 4-->
+                <div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold text-white mb-2">Mobile Test Automation Framework</h3>
+                        <p class="text-slate-400 mb-4">
+                            An automation framework for native Android/iOS applications using Appium. It follows the Page Object Model and is designed for running tests on real devices and emulators.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-sky-900/50 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Appium</span>
+                            <span class="bg-sky-900/50 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Java</span>
+                            <span class="bg-sky-900/50 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">TestNG</span>
+                            <span class="bg-sky-900/50 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Mobile Testing</span>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#" class="text-slate-500 font-medium inline-flex items-center space-x-2 cursor-not-allowed">
+                            <span>Coming Soon</span>
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Assistant Section -->
+        <section id="ai-assistant" class="section py-12 md:py-16">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-white mb-4">AI-Powered Assistant</h2>
+                <p class="text-slate-400 mb-8">Need help writing a project description? Enter a few key points below and let Gemini craft a professional summary for you.</p>
+               
+                <div class="bg-slate-800 p-6 rounded-lg shadow-lg">
+                    <textarea id="project-points" class="w-full h-32 bg-slate-700 text-slate-300 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 transition-shadow" placeholder="- Used Python and Playwright for UI tests&#10;- Implemented API tests with REST Assured&#10;- Integrated with GitHub Actions for CI/CD"></textarea>
+                    <button id="generate-desc-btn" class="mt-4 bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 w-full flex items-center justify-center space-x-2">
+                        <i data-lucide="sparkles" class="w-5 h-5"></i>
+                        <span>Generate Description</span>
+                    </button>
+
+                    <div id="loading-spinner" class="hidden mt-4 flex justify-center">
+                        <div class="spinner w-8 h-8 rounded-full border-4 border-slate-600"></div>
+                    </div>
+
+                    <div id="result-container" class="hidden mt-6 text-left bg-slate-700 p-4 rounded-lg">
+                        <p id="generated-description" class="text-slate-300 whitespace-pre-wrap"></p>
+                        <button id="copy-btn" class="mt-4 bg-slate-600 hover:bg-slate-500 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300 flex items-center space-x-2 text-sm">
+                            <i data-lucide="copy" class="w-4 h-4"></i>
+                            <span id="copy-btn-text">Copy to clipboard</span>
+                        </button>
+                    </div>
+                    <div id="error-message" class="hidden mt-6 text-left bg-red-900/50 text-red-300 p-4 rounded-lg"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--Skills Section-->
+        <section id="skills" class="section py-12 md:py-16">
+            <h2 class="text-3xl font-bold text-white text-center mb-12">Technical Skills</h2>
+            <div class="max-w-5xl mx-auto">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-slate-800 p-6 rounded-lg">
+                        <i data-lucide="code" class="mx-auto text-sky-400 h-10 w-10 mb-2"></i>
+                        <h3 class="text-lg font-semibold text-white">Languages</h3>
+                        <p class="text-slate-400">Java, Python, SQL, JavaScript</p>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-lg">
+                        <i data-lucide="square-mouse-pointer" class="mx-auto text-sky-400 h-10 w-10 mb-2"></i>
+                        <h3 class="text-lg font-semibold text-white">UI Automation</h3>
+                        <p class="text-slate-400">Selenium, Playwright, Appium</p>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-lg">
+                        <i data-lucide="arrow-left-right" class="mx-auto text-sky-400 h-10 w-10 mb-2"></i>
+                        <h3 class="text-lg font-semibold text-white">API Testing</h3>
+                        <p class="text-slate-400">REST Assured, Postman</p>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-lg">
+                        <i data-lucide="gauge-circle" class="mx-auto text-sky-400 h-10 w-10 mb-2"></i>
+                        <h3 class="text-lg font-semibold text-white">Performance Testing</h3>
+                        <p class="text-slate-400">JMeter</p>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-lg">
+                        <i data-lucide="refresh-cw" class="mx-auto text-sky-400 h-10 w-10 mb-2"></i>
+                        <h3 class="text-lg font-semibold text-white">CI/CD & DevOps</h3>
+                        <p class="text-slate-400">Jenkins, GitHub Actions, Docker</p>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-lg">
+                        <i data-lucide="database" class="mx-auto text-sky-400 h-10 w-10 mb-2"></i>
+                        <h3 class="text-lg font-semibold text-white">Databases</h3>
+                        <p class="text-slate-400">SQL, MySQL, PostgreSQL</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--Contact Section-->
+        <section id="contact" class="section text-center py-12 md:py-16">
+            <h2 class="text-3xl font-bold text-white mb-4">Get In Touch</h2>
+            <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-8">
+                I'm currently open to new opportunities. If you have a role that you think would be a good fit, or if you just want to connect, feel free to send me an email.
+            </p>
+            <a href="mailto:sonukrishnaofficiall@gmail.com" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 inline-block">
+                Say Hello
+            </a>
+        </section>
+
+    </main>
+
+    <!--Footer-->
+    <footer class="bg-slate-800/50 border-t border-slate-800">
+        <div class="container mx-auto px-6 py-8 text-center text-slate-400">
+            <p>&copy; 2025 Sonukrishna KR. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Gemini AI Assistant Logic
+        const generateBtn = document.getElementById('generate-desc-btn');
+        const projectPointsInput = document.getElementById('project-points');
+        const resultContainer = document.getElementById('result-container');
+        const generatedDesc = document.getElementById('generated-description');
+        const loadingSpinner = document.getElementById('loading-spinner');
+        const errorMessage = document.getElementById('error-message');
+        const copyBtn = document.getElementById('copy-btn');
+        const copyBtnText = document.getElementById('copy-btn-text');
+
+        generateBtn.addEventListener('click', async () => {
+            const userPrompt = projectPointsInput.value;
+
+            if (!userPrompt.trim()) {
+                errorMessage.textContent = 'Please enter some key points about your project.';
+                errorMessage.classList.remove('hidden');
+                return;
+            }
+
+            // Reset UI
+            loadingSpinner.classList.remove('hidden');
+            resultContainer.classList.add('hidden');
+            errorMessage.classList.add('hidden');
+            generateBtn.disabled = true;
+            generateBtn.classList.add('opacity-50', 'cursor-not-allowed');
+
+            const prompt = `You are an expert technical writer for an SDET's portfolio. Based on the following key points, write a professional and concise project description of 2-3 sentences. Do not use markdown formatting. Key Points:\n\n${userPrompt}`;
+
+            try {
+                // calling Gemini API
+                let chatHistory = [];
+                chatHistory.push({ role: "user" , parts: [{text: prompt }]});
+                const payload = { contents: chatHistory };
+                const apikey = "";
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+                
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`API error: ${response.statusText}`);
+                }
+
+                const result = await response.json();
+
+                if (result.candidates && result.candidates.length > 0 && 
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    generatedDesc.textContent = text.trim();
+                    resultContainer.classList.remove('hidden');
+                } else {
+                    throw new Error("Unexpected response format from the API.");
+                }
+
+            } catch (error) {
+                console.error("Error calling Gemini API:", error);
+                errorMessage.textContent = `Sorry, something went wrong. Please try again later.`;
+                errorMessage.classList.remove('hidden');
+            } finally {
+                loadingSpinner.classList.add('hidden');
+                generateBtn.disabled = false;
+                generateBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            }
+        });
+
+        // Copy to clipboard logic
+        copyBtn.addEventListener('click', () => {
+            const textToCopy = generatedDesc.textContent;
+            const textArea = document.createElement('textarea');
+            textArea.value = textToCopy;
+            document.body.appendChild(textArea);
+            textArea.select();
+            try{
+                document.execCommand('copy');
+                copyBtnText.textContent = 'Copied!';
+                setTimeout(() => {
+                    copyBtnText.textContent = 'Copy to clipboard';
+                }, 2000);
+            } catch(err) {
+                console.error('Failed to copy text:', err);
+                copyBtnText.textContent = 'Copy Failed';
+            }
+            document.body.removeChild(textArea);
+            });
+    </script>
+</body>
+
+</html>
